@@ -42,6 +42,11 @@
 
 % Template configuration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage[american]{babel}
+% \usepackage[T30]{fontenc}
+\usepackage{csquotes}
+\usepackage{listings}
+\pretolerance=9999
 
 % Disable hyphenation
 \usepackage[none]{hyphenat}
@@ -53,6 +58,9 @@
 \usepackage[fixed]{fontawesome5}
 \usepackage{academicons}
 
+% URLS can line break
+\usepackage{xurl}
+
 % Template variables for styling
 \newcommand{\TablePad}{\vspace{-0.4cm}}
 \newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
@@ -60,7 +68,12 @@
 
 % For fancy and multipage tables
 \usepackage{tabularx}
-\usepackage{ltablex}
+\usepackage{ltablex} %this package is not being used?
+
+% Supress warnings for the box size
+% (https://tex.stackexchange.com/questions/50830/do-i-have-to-care-about-bad-boxes/50850)
+\hbadness=99999
+\hfuzz=20pt
 
 % Define a new environment to place all CV entries in a 2-column table.
 % Left column are the dates, right column the entries.
