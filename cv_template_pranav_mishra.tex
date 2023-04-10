@@ -113,9 +113,12 @@
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{9pt}{0}\selectfont #1 -- #2}
 \newcommand{\Year}[1]{\fontsize{9pt}{0}\selectfont #1}
-\newcommand{\Ongoing}{on}
+\newcommand{\Ongoing}{Present} %Present / Today / Now / Ongoing
 \newcommand{\Future}{future}
-\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
+\newcommand{\Appointment}[4]{\textbf{#1}\newline  #2\newline  #3\newline  #4}
+\newcommand{\Twoline}[2]{\textbf{#1}\newline  #2}
+\newcommand{\Oneline}[1]{\textbf{#1}}
+\newcommand{\NoBold}[2]{#1\newline #2}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
