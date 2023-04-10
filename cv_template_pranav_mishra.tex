@@ -123,9 +123,10 @@
 % Define command to insert month name and year as date
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+\newdateformat{isodate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
 
 % Set the page margins
-\usepackage[a4paper,margin=1.5cm,includehead,headsep=5mm]{geometry}
+\usepackage[letterpaper,margin=2cm,includehead,headsep=5mm]{geometry}
 
 % To get the total page numbers (\pageref{LastPage})
 \usepackage{lastpage}
