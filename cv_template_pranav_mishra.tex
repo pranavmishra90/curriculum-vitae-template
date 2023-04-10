@@ -80,16 +80,22 @@
 \usepackage{environ}
 \NewEnviron{EntriesTable}{
 \TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth}@{\hspace{0.02\textwidth}}p{0.83\textwidth}@{}}
   \BODY
 \end{tabularx}
 }
 \NewEnviron{EntriesTableExtra}{
 \TablePad
-\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}@{\hspace{0.02\textwidth}}p{0.79\textwidth}@{\hspace{0.02\textwidth}}>{\raggedright\arraybackslash}p{0.07\textwidth}}
+%Alignment
+% p = cell's top aligned to the center of the row
+% m = cell's middle aligned to the center of the row
+% b = cell's bottom aligned to the center of the row
+
+\begin{tabularx}{\textwidth}{@{}b{0.0\textwidth}@{\hspace{0.02\textwidth}}b{0.82\textwidth}@{\hspace{0.02\textwidth}}>{\raggedright\arraybackslash}p{0.06\textwidth}}
   \BODY
 \end{tabularx}
 }
+
 
 % Macros to add links and mark publications
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
