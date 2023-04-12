@@ -31,7 +31,7 @@
 \newcommand{\MyName}{Dr. \FirstName\ \MiddleName\ \LastName}
 \newcommand{\Me}{\textbf{\LastName, \Initials}}  % For citations
 \newcommand{\Email}{pranav\_k\_mishra@rush.edu}
-\newcommand{\OfficePhone}{312-942-3146}
+\newcommand{\OfficePhone}{555-555-5555}
 \newcommand{\PersonalWebsite}{www.drpranavmishra.com}
 % \newcommand{\LabWebsite}{www.SOMEWEBSITEHERE.EDU}
 \newcommand{\ORCID}{0000-0001-5219-6269}
@@ -147,6 +147,8 @@
 % Use custom colors
 \usepackage[usenames,dvipsnames]{xcolor}
 
+
+
 % Set fonts (requires compilation with xelatex)
 \usepackage{fontspec}
 \setmainfont[%
@@ -184,16 +186,16 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\fontsize{9pt}{10pt}\selectfont
-  \monthyear\today
+\lfoot{\fontsize{8pt}{8pt}\selectfont
+  \isodate \today
 }
-\chead{
-  \fontsize{9pt}{10pt}\selectfont
+\lhead{
+  \fontsize{8pt}{8pt}\selectfont
   \MyName
   \hspace{0.2cm} -- \hspace{0.2cm}
   \Title
 }
-\rhead{\fontsize{9pt}{10pt}\selectfont \thepage{} of \pageref*{LastPage}}
+\rfoot{\fontsize{8pt}{8pt}\selectfont \thepage{} of \pageref*{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 
 % Metadata for the PDF output and control of hyperlinks
