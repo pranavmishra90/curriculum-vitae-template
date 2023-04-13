@@ -1,7 +1,5 @@
-name: compile-pdf
-
+name: LaTex-to-PDF
 on:
-  pull_request:
   push:
     branches:
       - main
@@ -20,7 +18,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Install biber
+        run:  sudo apt-get -y install biber 
 
       - name: Setup caching for tectonic
         uses: actions/cache@v3
@@ -52,16 +52,15 @@ jobs:
       - name: Compile the PDF
         run: |
           make
-          mkdir output
-          cp *.pdf output/
-
+          mkdir PDF-output
+          touch PDF-output/.nojekyll
+          cp *.pdf PDF-output/
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
         # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
-        uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
-          publish_branch: pdf
+          publish_dir: ./PDF-output
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

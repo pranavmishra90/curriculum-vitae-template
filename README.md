@@ -1,36 +1,16 @@
 # Curriculum Vitae
 
-[![compile-pdf](https://github.com/leouieda/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/leouieda/cv/actions)
+[![Build-LaTex-Document](https://github.com/pranavmishra90/curriculum-vitae-template/actions/workflows/LaTex-to-PDF/badge.svg?event=push)](https://github.com/pranavmishra90/curriculum-vitae-template/actions)
 
-These are the Latex sources for my academic CV.
+These are the [Latex](./pranav_kumar_mishra_cv.tex) sources for my academic CV. It automatically pulls from .tex files in the [/Bibliography](./Bibliography/) directory. Alternatively, it can source all types of citations using the keyword filter in the [cv.bib](./CV.bib).
 
 **Download** the latest compiled PDF:
-[leonardo_uieda_cv.pdf](https://github.com/leouieda/cv/raw/pdf/leonardo_uieda_cv.pdf)
+[curriculum-vitae-template.pdf](https://github.com/pranavmishra90/curriculum-vitae-template/blob/gh-pages/PDF-output/curriculum-vitae-template.pdf)
 
 ## Template
 
 You're free to reuse and modify this template under the terms of the BSD
-3-clause License (see `LICENSE.txt`).
-
-To use it:
-
-* Click on the ["Use this template"](https://github.com/leouieda/cv/generate)
-  button to grab a copy of the repository.
-* Install Tectonic, either from their website or using the conda
-  `environment.yml` file provided in the repository.
-* Rename `leonardo_uieda_cv.tex`.
-* Fill out the variables and fields in the `.tex` file.
-* Compile the PDF to check the results with `make show`.
-* Push your changes and GitHub Actions should do it's magic and make the PDF
-  available at `https://github.com/YOURUSERNAME/cv/raw/pdf/YOURNAME_cv.pdf`.
-
-### About
-
-I decided to make my own template after using `moderncv` for a while.
-I wanted a cleaner look and something that is more unique (as much as an academic
-CV can be).
-It was also a chance for me to learn some LaTeX templating (and procrastihack a
-little).
+3-clause License (see `LICENSE.md`). Significant credit goes to [Leonardo Uieda](https://github.com/leouieda) who created the original [repository](https://github.com/leouieda/cv). This repository is a modification on his work for content and style.
 
 ## Building
 
@@ -50,10 +30,10 @@ I highly recommend using the `Makefile`:
 ## Deploying
 
 A PDF is compiled automatically by GitHub Actions with every commit to the
-`main` branch and uploaded to the `pdf` branch.
-This way, the compiled PDF is updated and made available on the internet automatically.
+`main` branch and uploaded to the `gh-pages` branch.
+This way, the compiled PDF is updated and served automatically.
 
 ## License
 
 All LaTeX template source code is distributed under the
-[BSD 3-clause License](https://opensource.org/licenses/BSD-3-Clause).
+[BSD 3-clause License](https://opensource.org/licenses/BSD-3-Clause). See [License](./LICENSE.md) for more information.
