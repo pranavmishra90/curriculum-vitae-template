@@ -2,7 +2,9 @@
 
 [![Build-LaTex-Document](https://github.com/pranavmishra90/curriculum-vitae-template/actions/workflows/LaTex-to-PDF/badge.svg?event=push)](https://github.com/pranavmishra90/curriculum-vitae-template/actions)
 
+
 These are the [Latex](./cv_template_pranav_mishra.tex) sources for my academic CV. It automatically pulls from .tex files in the [/Bibliography](./Bibliography/) directory. Alternatively, it can source all types of citations using the keyword filter in the [cv.bib](./CV.bib).
+
 
 **Download** the latest compiled PDF:
 [curriculum-vitae-template.pdf](https://github.com/pranavmishra90/curriculum-vitae-template/blob/gh-pages/PDF-output/curriculum-vitae-template.pdf)
